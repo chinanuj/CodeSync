@@ -114,7 +114,3 @@ To build the frontend for production:
 cd Frontend
 npm run build
 ```
-
-## License
-
-Open source project for educational purposes.
