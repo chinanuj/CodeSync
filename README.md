@@ -1,6 +1,3 @@
-Here is the revised `README.md` incorporating the new frontend details based on the `Frontend/package.json` and project structure you provided.
-
-```markdown
 # Collaborative Code Editor
 
 A real-time collaborative coding platform built with a FastAPI backend and a modern React frontend. Two users can share a room, write code together using a full-featured code editor, and execute it in real-time.
@@ -33,17 +30,14 @@ A real-time collaborative coding platform built with a FastAPI backend and a mod
 
 ## Project Structure
 
-
 ```
-
-├── main.py                 # Backend entry point
-├── requirements.txt        # Backend dependencies
-├── render.yaml            # Deployment configuration
-└── Frontend/              # React Frontend application
-├── src/               # Frontend source code
-├── package.json       # Frontend dependencies
-└── ...
-
+├── main.py                # Backend entry point
+├── requirements.txt       # Backend dependencies
+├── render.yaml           # Deployment configuration
+└── Frontend/             # React Frontend application
+    ├── src/              # Frontend source code
+    ├── package.json      # Frontend dependencies
+    └── ...
 ```
 
 ## Running Locally
@@ -58,7 +52,6 @@ pip install -r requirements.txt
 
 # Run the server
 python main.py
-
 ```
 
 The backend API will run on `http://localhost:8000`.
@@ -76,7 +69,6 @@ npm install
 
 # Start the development server
 npm run dev
-
 ```
 
 The frontend will typically run on `http://localhost:5173` (check your terminal output).
@@ -84,18 +76,16 @@ The frontend will typically run on `http://localhost:5173` (check your terminal 
 ## API Endpoints
 
 ### REST API
-
-* `POST /rooms` - Create a new room
-* `GET /rooms/{room_code}/status` - Check room status
-* `POST /rooms/{room_code}/join` - Join a room
-* `POST /rooms/{room_code}/leave` - Leave a room
-* `POST /rooms/{room_code}/run` - Execute code
-* `DELETE /rooms/{room_code}` - Delete a room
-* `GET /rooms` - List all active rooms
+- `POST /rooms` - Create a new room
+- `GET /rooms/{room_code}/status` - Check room status
+- `POST /rooms/{room_code}/join` - Join a room
+- `POST /rooms/{room_code}/leave` - Leave a room
+- `POST /rooms/{room_code}/run` - Execute code
+- `DELETE /rooms/{room_code}` - Delete a room
+- `GET /rooms` - List all active rooms
 
 ### WebSocket
-
-* `WS /ws/rooms/{room_code}` - Real-time collaboration endpoint
+- `WS /ws/rooms/{room_code}` - Real-time collaboration endpoint
 
 ## WebSocket Protocol
 
@@ -107,14 +97,12 @@ Connect and send an INIT message:
   "clientId": "unique-client-id",
   "participantId": "optional-participant-id"
 }
-
 ```
 
 Message types:
-
-* `EDIT` - Code changes
-* `CURSOR` - Cursor position updates
-* `PING` - Connection keepalive
+- `EDIT` - Code changes
+- `CURSOR` - Cursor position updates
+- `PING` - Connection keepalive
 
 ## Deployment
 
@@ -125,13 +113,4 @@ To build the frontend for production:
 ```bash
 cd Frontend
 npm run build
-
-```
-
-## License
-
-Open source project for educational purposes.
-
-```
-
 ```
