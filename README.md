@@ -113,4 +113,8 @@ To build the frontend for production:
 ```bash
 cd Frontend
 npm run build
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> edfb23b0baebcd6ea3cfaebd4eb13974bea92e8e
